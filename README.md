@@ -1,12 +1,24 @@
-# React + Vite
+# 🎬 WebMovie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**WebMovie** là một ứng dụng web xem thông tin phim được xây dựng bằng **React.js**, cho phép người dùng tìm kiếm, xem chi tiết phim.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tính năng chính
 
-## Expanding the ESLint configuration
+- 🔍 Tìm kiếm phim theo tên
+- 🎞️ Hiển thị danh sách phim nổi bật (popular movies)
+- 📄 Xem chi tiết thông tin phim: poster, mô tả, cast,...
+- 🌙 Giao diện đẹp
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Công nghệ sử dụng
+
+- ⚛️ React.js
+- 🎨 Tailwind 
+- 🌐 [The Movie Database API (TMDb)](https://www.themoviedb.org/documentation/api) – cung cấp dữ liệu phim
+- 🔁 React Router DOM
+- 📦 Axios / Fetch API
+
+---
