@@ -13,7 +13,7 @@ const Footer = () => {
         }}
       >
         <div className="max-w-screen-lg mx-auto flex flex-col items-center">
-          {/* Logo phần footer */}
+          {/* Logo */}
           <div className="flex items-center mb-6">
             <span className="text-green-500 text-3xl mr-2">
               <Link to="/" className="hover:text-red-500">MoiMovies</Link>
@@ -33,7 +33,7 @@ const Footer = () => {
             <p>Contact us | Term of services | About us</p>
           </div>
 
-          {/* Các liên kết xem phim */}
+          {/* Các liên kết khác */}
           <div className="flex justify-center space-x-12">
             <Link to="/" className="hover:text-red-500">Recent releases</Link>
             <Link to="/" className="hover:text-red-500">Top IMDb</Link>

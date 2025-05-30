@@ -33,6 +33,7 @@ const SeriesList = () => {
     <div className="text-white pt-20">
       <h2 className="text-3xl font-bold text-center mb-8">TV Series</h2>
 
+      {/* Tìm kiếm */}
       <div className="flex mb-8">
         <input
           type="text"
@@ -57,6 +58,8 @@ const SeriesList = () => {
           />
         ))}
       </div>
+
+      {/* Nút tải thêm */}
 
       {!loading && (
         <div className="flex justify-center mt-8">

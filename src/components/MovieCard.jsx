@@ -12,7 +12,7 @@ const MovieCard = ({ movie, tv, img, id }) => {
       onClick={() => navigate(path)}
       className="movie-card flex flex-col items-center w-32 cursor-pointer group hover:text-red-500"
     >
-      {/* Ảnh phim + overlay + icon */}
+      {/* Bộ phim */}
       <div className="relative w-32 h-48 rounded-lg overflow-hidden">
         <img
           src={`https://image.tmdb.org/t/p/w500${img}`}
@@ -20,7 +20,7 @@ const MovieCard = ({ movie, tv, img, id }) => {
           className="w-full h-full object-cover transition duration-300 group-hover:brightness-50"
         />
 
-        {/* Icon play xuất hiện khi hover */}
+        {/* Icon play */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <PlayCircleOutlined style={{ fontSize: 40, color: 'white' }} />
         </div>

@@ -14,8 +14,7 @@ const TrailerModal = ({ videoKey, onClose }) => {
           allow="autoplay; encrypted-media"
           allowFullScreen
         ></iframe>
-
-        {/* Nút đóng */}
+       
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-white text-2xl hover:text-red-500"

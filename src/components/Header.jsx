@@ -66,7 +66,7 @@ const Header = () => {
             <Link to="/" className="text-3xl font-bold tracking-wide">tMovies</Link>
         </div>
 
-        {/* Mobile Bottom */}
+        {/* Mobile Nav */}
         <div className="fixed bottom-0 left-0 w-full bg-black border-t border-gray-700 flex justify-around py-2 text-white md:hidden z-50">
             {headerNav.map((e, i) => (
             <Link

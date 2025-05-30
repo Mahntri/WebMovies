@@ -33,6 +33,7 @@ const MovieList = () => {
     <div className="text-white pt-20">
       <h2 className="text-3xl font-bold text-center mb-8">Movies</h2>
 
+      {/* Tìm kiếm */}
       <div className="flex mb-8">
         <input
           type="text"
@@ -58,6 +59,7 @@ const MovieList = () => {
         ))}
       </div>
 
+      {/* Nút tải thêm */}
       {!loading && (
         <div className="flex justify-center mt-8">
           <button
