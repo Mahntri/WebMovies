@@ -27,7 +27,7 @@ const MovieCard = ({ movie, tv, img, id }) => {
       </div>
 
       {/* Tên phim */}
-      <p className="text-center text-xs truncate w-full mt-2 group-hover:text-red-500 transition">
+      <p className="text-center text-white text-xs truncate w-full mt-2 group-hover:text-red-500 transition">
         {title}
       </p>
     </div>

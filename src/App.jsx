@@ -27,7 +27,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-gray min-h-screen px-6">
+      <div className="bg-black min-h-screen px-6">
         <div className="max-w-screen-lg mx-auto pt-24">
           <Header />
           <Routes>
