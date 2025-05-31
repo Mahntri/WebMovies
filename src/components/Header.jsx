@@ -63,7 +63,7 @@ const Header = () => {
 
         {/* Mobile Logo */}
         <div className="md:hidden bg-black text-white text-center py-4 border-b border-gray-700 fixed top-0 left-0 right-0 z-50">
-            <Link to="/" className="text-3xl font-bold tracking-wide">tMovies</Link>
+            <Link to="/" className="text-3xl font-bold tracking-wide">MoiMovies</Link>
         </div>
 
         {/* Mobile Nav */}
