@@ -60,11 +60,11 @@ const Header = () => {
             </ul>
 
                 <div className="ml-6">
-                    <Link to="/login" className="text-white text-2xl font-bold hover:text-red-500">
-                        Đăng nhập
+                    <Link to="/login" className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                        Login
                     </Link>
                 </div>
-                
+
             </div>
         </div>
 
