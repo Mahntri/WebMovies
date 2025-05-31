@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { PlayCircleOutlined } from '@ant-design/icons';
 
 const MovieCard = ({ movie, tv, img, id }) => {
-  const navigate = useNavigate(); // Dùng để điều hướng đến trang chi tiết phim
-  const title = movie || tv; // Tên phim hoặc series
-  const path = movie ? `/movie/${id}` : `/tv/${id}`; // Đường dẫn đến trang chi tiết phim hoặc series
+  const navigate = useNavigate();
+  const title = movie || tv;
+  const path = movie ? `/movie/${id}` : `/tv/${id}`;
 
   return (
     <div

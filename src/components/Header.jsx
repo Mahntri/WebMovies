@@ -17,10 +17,10 @@ const headerNav = [
 ]; 
 
 const Header = () => {
-    const { pathname } = useLocation(); // Lấy đường dẫn hiện tại
-    const headerRef = useRef(null); // Tham chiếu đến phần tử header
+    const { pathname } = useLocation();
+    const headerRef = useRef(null);
 
-    const active = headerNav.findIndex(e => e.path === pathname); // Tìm chỉ số của đường dẫn hiện tại trong headerNav
+    const active = headerNav.findIndex(e => e.path === pathname);
 
     // useEffect(() => {
     //     const shrinkHeader = () => {
@@ -58,6 +58,13 @@ const Header = () => {
                 </li>
                 ))}
             </ul>
+
+                <div className="ml-6">
+                    <Link to="/login" className="text-white text-2xl font-bold hover:text-red-500">
+                        Đăng nhập
+                    </Link>
+                </div>
+                
             </div>
         </div>
 

@@ -6,21 +6,21 @@ import TrailerModal from './TrailerModal';
 import { useNavigate } from 'react-router-dom';
 
 const HeroBanner = () => {
-  const [movies, setMovies] = useState([]); // Lưu trữ danh sách phim
-  const [currentIndex, setCurrentIndex] = useState(0);  // Chỉ số phim hiện tại
-  const intervalRef = useRef(null); // Lưu trữ interval để tự động chuyển phim
-  const [direction, setDirection] = useState(0); // Hướng chuyển động (0: không chuyển, 1: sang phải, -1: sang trái)
-  const bannerRef = useRef(null); // Tham chiếu đến phần tử banner
-  const [trailerKey, setTrailerKey] = useState(null); // Lưu trữ khóa trailer đang xem
-  const navigate = useNavigate(); // Dùng để điều hướng đến trang chi tiết phim
+  const [movies, setMovies] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
+  const [direction, setDirection] = useState(0);
+  const bannerRef = useRef(null);
+  const [trailerKey, setTrailerKey] = useState(null); 
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchTrending = async () => {
       try {
         const trending = await tmdbApi.getTrendingMovies();
         // setMovies(trending.slice(0, 10));
-        const shuffled = trending.sort(() => 0.5 - Math.random()); // trộn danh sách
-        setMovies(shuffled.slice(0, 10)); // chọn 10 phim ngẫu nhiên
+        const shuffled = trending.sort(() => 0.5 - Math.random());
+        setMovies(shuffled.slice(0, 10));
       } catch (error) {
         console.error('Error fetching trending movies:', error);
       }
@@ -28,23 +28,22 @@ const HeroBanner = () => {
     fetchTrending(); 
   }, []);
 
-  // Hàm start/stop interval riêng biệt
   const startAutoSlide = () => {
-    clearInterval(intervalRef.current); // Dừng interval cũ nếu có
+    clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
-      handleNext(true); // Tự động chuyển sang phim tiếp theo
+      handleNext(true);
     }, 5000);
   };
 
   const stopAutoSlide = () => {
-    clearInterval(intervalRef.current); // Dừng interval khi không cần thiết
+    clearInterval(intervalRef.current);
   };
 
   useEffect(() => {
-    if (movies.length === 0 || trailerKey) return; // Dừng nếu đang xem trailer
+    if (movies.length === 0 || trailerKey) return;
     startAutoSlide();
     return () => stopAutoSlide();
-  }, [movies, currentIndex, trailerKey]); // theo dõi thêm trailerKey
+  }, [movies, currentIndex, trailerKey]);
 
   const handleNext = (auto = false) => {
     setDirection(1);
@@ -60,15 +59,15 @@ const HeroBanner = () => {
     );
   };
 
-  const movie = movies[currentIndex]; // Lấy phim hiện tại dựa trên chỉ số
+  const movie = movies[currentIndex];
   if (!movie) return null;
 
   const handleWatchTrailer = async () => {
     try {
-        const videos = await tmdbApi.getMovieVideos(movie.id); // Lấy danh sách video của phim
-        const trailer = videos.find((v) => v.type === 'Trailer' && v.site === 'YouTube'); // Tìm trailer chính thức
+        const videos = await tmdbApi.getMovieVideos(movie.id);
+        const trailer = videos.find((v) => v.type === 'Trailer' && v.site === 'YouTube');
         if (trailer) {
-        setTrailerKey(trailer.key); // Lưu khóa trailer để mở modal
+        setTrailerKey(trailer.key);
         } else {
         alert('Trailer not available');
         }
